@@ -1,6 +1,7 @@
 'use client'
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import { useUser } from "@clerk/nextjs"
+import Breadcrumbs from "./utilities/Breadcrumbs";
 
 function Header() {
     const { user } = useUser();
@@ -14,6 +15,7 @@ function Header() {
         }
 
         {/* breadcrumbs  */}
+        <Breadcrumbs/>
         <div>
             <SignedOut>
                 <SignInButton mode="modal" />
